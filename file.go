@@ -152,7 +152,7 @@ func (l *FileLogger) asyncWriteLog() {
 	for {
 		////按日志文件大小切割
 		if l.needSplit(l.logFileObj) {
-			fmt.Printf("l 地址是%v\n", &l)
+			//fmt.Printf("l 地址是%v\n", &l)
 			newFileObj := l.splitLogFile(l.logFileObj)
 			if newFileObj == nil {
 				panic("新建日志打开日志文件返回为空")
